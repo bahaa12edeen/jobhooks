@@ -3,11 +3,6 @@ import React from 'react';
 function Blog(){
     return(
         <>
-<<<<<<< HEAD
-  
-  
-  
-=======
   {/* <div id="preloader-active">
     <div className="preloader d-flex align-items-center justify-content-center">
       <div className="preloader-inner position-relative">
@@ -92,7 +87,7 @@ function Blog(){
     </div>
     {/* Header End */}
   </header>
->>>>>>> 2518575132ecdb437f7af61a9dfafcc84ed9092e
+
   {/* Hero Area Start*/}
   <div className="slider-area ">
     <div

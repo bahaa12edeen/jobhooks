@@ -1,6 +1,6 @@
 // import './App.css';
 import { Routes, BrowserRouter, Route, Link } from 'react-router-dom';
-import Home from './component/index';
+import Home from './component/Index';
 // import Form from './component/Form';
 import Footer from './component/Footer';
 import About from './component/About';
@@ -10,7 +10,7 @@ import Tip from './component/Tip';
 import Tip2 from './component/Tip2';
 import Userinfo from './component/Userinfo'; 
 import UpdateInfo from './component/updateInfo'; 
-import Apply from './component/Apply';
+// import Apply from './component/Apply';
 import Joblist from './component/Job_listing'
 import Contact from './component/Contact';
 import Details from './component/Job_details';

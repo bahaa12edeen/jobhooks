@@ -4,8 +4,6 @@ function Details() {
     return (
         <>
         
-<<<<<<< HEAD
-=======
         {/* Preloader Start  */}
     {/* <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
@@ -92,18 +90,15 @@ function Details() {
     </div>
     {/* Header End */}
   </header>
->>>>>>> 2518575132ecdb437f7af61a9dfafcc84ed9092e
+
   <main>
     {/* Hero Area Start*/}
     <div className="slider-area ">
       <div
         className="single-slider section-overly slider-height2 d-flex align-items-center"
-<<<<<<< HEAD
-        data-background="assets/img/hero/about.jpg" >
-=======
         data-background="assets/img/hero/about.jpg"
       >
->>>>>>> 2518575132ecdb437f7af61a9dfafcc84ed9092e
+
         <div className="container">
           <div className="row">
             <div className="col-xl-12">

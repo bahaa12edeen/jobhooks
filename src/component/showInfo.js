@@ -14,7 +14,7 @@ function ListUser() {
             setUsers(response.data);
         });
     }
-    }
+    
     return (
         <div>
             <h1>List Users</h1>
