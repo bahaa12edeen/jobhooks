@@ -12,7 +12,7 @@ input[type="file"]{
 
 .c2{
     /* margin: 0 40%; */
-
+        padding: 3px;
     width: 60%;
 }
 
@@ -26,7 +26,7 @@ input[type="file"]{
     padding: 5px 10px;
     margin: 5px 3px;
     margin-bottom: 0;
-    width: 25em;
+    width:20em;
 }
 
 .d1{
@@ -36,9 +36,10 @@ input[type="file"]{
     margin-right: 20px;
     margin-bottom: 2%;
 }
+a{text-decoration: none;}
 
 .butt{
-    margin-top: 5px;
+    margin-top: 3px;
     margin-bottom: 20px;
     background-color: #efeef2a3;
     color: #fb246a;
@@ -46,6 +47,7 @@ input[type="file"]{
     font-size: 23px;
     cursor: pointer;
     border: 1px solid #fb246a;
+    margin-left: 5%;
 }
 
 .butt:hover{
@@ -57,4 +59,18 @@ input[type="file"]{
     color: #D01A1A;
 }
 
-label{color: #000;}
+label{color: #000; width: 200px;}
+input::placeholder{color: #000; font-size: medium;}
+
+.message{
+    position: relative;
+    background-color: rgb(251, 36, 106);
+    z-index: 9999;
+    height: 100px;
+    
+}
+.message p{
+    color: white;
+    font-size: 30px;
+    padding-top: 30px;
+}

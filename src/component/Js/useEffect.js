@@ -1,4 +1,3 @@
-
 import { useEffect } from "react"
 
 const useScript = () => {
@@ -25,15 +24,15 @@ const useScript = () => {
                 }]
             }
         ];
-        var map = new google.maps.Map(document.getElementById('map'), {
-            center: {
-                lat: -31.197,
-                lng: 150.744
-            },
-            zoom: 9,
-            styles: grayStyles,
-            scrollwheel: false
-        });
+        // var map = new google.maps.Map(document.getElementById('map'), {
+        //     center: {
+        //         lat: -31.197,
+        //         lng: 150.744
+        //     },
+        //     zoom: 9,
+        //     styles: grayStyles,
+        //     scrollwheel: false
+        // });
     }
   }
   )}

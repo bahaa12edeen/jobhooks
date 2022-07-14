@@ -2,10 +2,9 @@
 
 .small{color: #000;}
 
-
- .center {
+ .centeruser {
 	 position: absolute;
-	 top: 60%;
+	 top: 65%;
 	 left: 50%;
 	 -webkit-transform: translate(-50%, -50%);
 	 transform: translate(-50%, -50%);
@@ -14,11 +13,11 @@
 	 align-items: center;
 	 justify-content: center;
 	 background: #2e3ab0;
-	 height: 30em;
+	 height: 22em;
 	 width: 30em;
      font-size: large;
 }
- .container {
+ .containerUser {
 	 width: 90%;
 	 background: #d4d5e0;
 	 display: flex;
@@ -74,7 +73,7 @@
 	 font-weight: 500;
 	 margin: 20px auto 20px;
 }
- button {
+ .updateinfo {
 	 border: 1px solid black;
 	 height: 30px;
 	 width: 150px;
@@ -83,7 +82,7 @@
 	 cursor: pointer;
 	 color: #000;
 }
- button:hover {
+ .updateinfo:hover {
 	 background: #a0a1b2;
 }
  .title {

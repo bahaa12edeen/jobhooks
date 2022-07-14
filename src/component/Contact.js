@@ -15,7 +15,7 @@ function Contact() {
         <div className="row">
           <div className="col-xl-12">
             <div className="hero-cap text-center">
-              <h2>Contact us</h2>
+            <p className='hero-text'>Contact us</p>
             </div>
           </div>
         </div>

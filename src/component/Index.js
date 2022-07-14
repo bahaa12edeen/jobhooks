@@ -5,17 +5,19 @@ import '../css/index.css';
 
 
 
+
 function Home() {
 
     const [user, setUsers] = useState([]);
     const [Login, setLogin] = useState(false);
 
     useEffect(()=>{
+     
      axios.get(`http://localhost/job_hooks/API/loginuser.php`)
      .then((res)=>{
          const data=res.data;
          setLogin(data[0].isLogin);
-        console.log(Login)                 
+        // console.log(Login)                 
          });
 
      axios.get(`http://localhost/job_hooks/API/showUserInfo.php`)
@@ -30,7 +32,7 @@ function Home() {
     //   })
       
      });
-    })
+    },[user])
 
     
     return ( 
@@ -143,7 +145,7 @@ function Home() {
                     <div className="col-lg-12">
                         <div className="browse-btn2 text-center mt-50">
                            
-                             <Link to="/Joblist" eventKey="link-1" className="border-btn2">Browse All </Link> 
+                             <Link to="/Job_listing" eventKey="link-1" className="border-btn2">Browse All </Link> 
                             
                             {/* <a href="job_listing.html" className="border-btn2">Browse All Sectors</a> */}
                             
@@ -162,12 +164,11 @@ function Home() {
                           <p className="pera1">FEATURED TOURS Packages</p>
                           <p className="pera2"> Make a Difference with Your Online Resume!</p>
 
-                                        {/* user login ??? */}
-                          {!Login &&   <Link to="/Login" eventKey="link-1" className="border-btn2 border-btn4" name="loginCV"  onClick={''}>Upload your cv</Link>
-                          }
+             
+   <Link to= {sessionStorage.getItem("user_id")==0 ? "/Login" : "/Apply"}  eventKey="link-1" className="border-btn2 border-btn4" name="loginCV"  onClick={''}>Upload your cv</Link>
+  
 
-                          {Login && <Link to="/Apply" eventKey="link-2" className="border-btn2 border-btn4" name="applyCV" onClick={''}>Upload your cv</Link>}
-                          {/* user login ??? */}
+ 
 
 
                         </div>
@@ -199,7 +200,7 @@ function Home() {
                                 </div>
                                 <div className="job-tittle">
                                 <Link to="/CS" eventKey="link-10"><h4>Cyber security</h4></Link>
-                                    <ul>
+                                    <ul style={{ marginRight:'-17%'}}>
                                         <li>Computer Information</li>
                                     </ul>
                                 </div>
@@ -216,7 +217,7 @@ function Home() {
                                 </div>
                                 <div className="job-tittle">
                                     <h4>Online teacher</h4>
-                                    <ul>
+                                    <ul style={{ marginRight:'-16%'}}>
                                         <li>Teaching - Coaching</li>
                                     </ul>
                                 </div>
@@ -234,7 +235,7 @@ function Home() {
                                 </div>
                                 <div className="job-tittle">
                                 <Link to="/HE" eventKey="link-20"><h4>Hospital engineer</h4></Link>
-                                    <ul>
+                                    <ul style={{ marginRight:'-17%'}}>
                                         <li>Hospital and Healthcare</li>
                                     </ul>
                                 </div>
@@ -300,74 +301,7 @@ function Home() {
              </div>
         </div>
         {/* How  Apply Process End*/}
-        {/* Testimonial Start */}
-            <h2 className="cent mb-5">Our Client Reviews</h2>
-        <div className="testimonial-area padding">
-            <div className="container mb-5">
-                {/* Testimonial contents */}
-                <div className="row d-flex justify-content-center">
-                    <div className="col-xl-8 col-lg-8 col-md-10">
-                        <div className="h1-testimonial-active dot-style">
-                            {/* Single Testimonial */}
-                            <div className="single-testimonial text-center">
-                                {/* Testimonial Content */}
-                                <div className="testimonial-caption ">
-                                    {/* founder */}
-                                    <div className="testimonial-founder  ">
-                                        <div className="founder-img mb-10">
-                                            <img src="https://avatars.githubusercontent.com/u/100213753?v=4" className="userimg" alt="" />
-                                            <span>Dua-Alsafasfeh</span>
-                                            <p>Communication Engineering</p>
-                                        </div>
-                                    </div>
-                                    <div className="testimonial-top-cap">
-                                        <p>“I was able to get a job through you, you deserve more than a word of thanks. I was able to find many opportunities that fit my abilities and skills.”</p>
-                                    </div>
-                                </div>
-                            </div>
-                            {/* Single Testimonial */}
-                            <div className="single-testimonial text-center ">
-                                {/* Testimonial Content */}
-                                <div className="testimonial-caption ">
-                                    {/* founder */}
-                                    <div className="testimonial-founder  ">
-                                        <div className="founder-img mb-10">
-                                            <img src="https://avatars.githubusercontent.com/u/100212231?v=4" className="userimg" alt="" />
-                                            <span>Anas Allawafeh</span>
-                                            <p>Communication Engineering</p>
-                                        </div>
-                                    </div>
-                                    <div className="testimonial-top-cap">
-                                        <p>“I was able to get a job through you, you deserve more than a word of thanks. I was able to find many opportunities that fit my abilities and skills.”</p>
-                                    </div>
-                                </div>
-                            </div>
-                            {/* Single Testimonial */}
-                            <div className="single-testimonial text-center">
-                                {/* Testimonial Content */}
-                                <div className="testimonial-caption ">
-                                    {/* founder */}
-                                    <div className="testimonial-founder  ">
-                                        <div className="founder-img mb-10">
-                                            <img src="https://avatars.githubusercontent.com/u/62554357?v=4" className="userimg" alt="" />
-                                            <span>Obada_alshafeey</span>
-                                            <p>Web Devloper</p>
-                                        </div>
-                                    </div>
-                                    <div className="testimonial-top-cap">
-                                        <p>“I was able to get a job through you, you deserve more than a word of thanks. I was able to find many opportunities that fit my abilities and skills.”</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><br/><br/><br/><br/>
-
-
-
-        </div>
-        {/* Testimonial End */}
+        
          {/* Support Company Start*/}
          <div className="support-company-area support-padding fix mb-5 mt-5">
             <div className="container mb-5">

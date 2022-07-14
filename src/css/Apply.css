@@ -32,7 +32,7 @@ input[type="file"]{
     margin: 0 auto;
     width: 60%;
 }
-
+a{text-decoration: none;}
 .c2{
     margin: 0 auto;
     width: 60%;
@@ -48,7 +48,11 @@ input[type="file"]{
     padding: 5px 10px;
     margin: 5px 3px;
     margin-bottom: 0px;
+    width: 250px;
 }
+
+.sel-inp{width: 200px;}
+.url-inp{width: 380px;}
 
 .d1{
     width: 25% !important;
@@ -83,4 +87,17 @@ input[type="file"]{
 
 .label2{
     color: #7e8593;
+}
+
+.message{
+    position: relative;
+    background-color: rgb(251, 36, 106);
+    z-index: 9999;
+    height: 100px;
+    
+}
+.message p{
+    color: white;
+    font-size: 30px;
+    padding-top: 30px;
 }
